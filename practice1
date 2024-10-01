@@ -13,11 +13,11 @@ def predict(X, theta0, theta1):
   return theta0 + theta1*X
 
 def cost_function(X, Y, theta0, theta1):
-  m = len(X)
+  m = leng(X)
   return (1/(2-m))*np.sum((predict(X, theta0, theta1) - Y) **2)
 
 def gradient_descent(X, Y, theta0, theta1):
-  m = len(X)
+  m = leng(X)
   gradient0 = (1/m) * np.sum(predict(X, theta0, theta1) - Y)
   gradient1 = (1/m) * np.sum((predict(X, theta0, theta1) - Y) * X)
   new_theta0 = theta0 - learning_rate * gradient0
